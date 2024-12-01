@@ -7,12 +7,17 @@ def solve_kvadr_rivn(a, b, c):
     return x1, x2
 
 
-a_str = input("Уведіть a: ")
-b_str = input("Уведіть b: ")
-c_str = input("Уведіть c: ")
+def input_call():
+    a = int(input("Уведіть a: "))
+    b = int(input("Уведіть b: "))
+    c = int(input("Уведіть c: "))
+    return a, b, c
 
-answer = solve_kvadr_rivn(int(a_str), int(b_str), int(c_str))
 
+coeffs = input_call()
+answer = solve_kvadr_rivn(coeffs[0], coeffs[1], coeffs[2])
+
+print()
 if answer is None:
     print('Коренів не знайдено оскільки Дискримінант від\'ємний.')
 else:

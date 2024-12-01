@@ -1,16 +1,17 @@
 def calculator(a, b, action):
-    if action == 1:
-        return a + b
-    elif action == 2:
-        return a - b
-    elif action == 3:
-        return a * b
-    elif action == 4:
-        return a / b
-    elif action == 5:
-        return a ** b
-    else:
-        return 'Уведено некоректну дію.'
+    match action:
+        case 1:
+            return a + b
+        case 2:
+            return a - b
+        case 3:
+            return a * b
+        case 4:
+            return a / b
+        case 5:
+            return a ** b
+        case _:
+            return 'Уведено некоректну дію.'
 
 
 def input_call():
