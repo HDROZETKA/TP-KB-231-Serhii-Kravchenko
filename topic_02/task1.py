@@ -1,5 +1,9 @@
-def solve_kvadr_rivn(a, b, c):
-    d = b ** 2 - 4 * a * c
+
+def find_discriminator(a, b, c):
+    return b ** 2 - 4 * a * c
+
+def find_roots(a, b, c):
+    d = find_discriminator(a, b, c)
     if d < 0:
         return None
     x1 = (-b + d ** 0.5) / (2 * a)
@@ -15,7 +19,7 @@ def input_call():
 
 
 coeffs = input_call()
-answer = solve_kvadr_rivn(coeffs[0], coeffs[1], coeffs[2])
+answer = find_roots(coeffs[0], coeffs[1], coeffs[2])
 
 print()
 if answer is None:

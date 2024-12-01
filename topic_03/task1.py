@@ -40,15 +40,20 @@ def input_call():
     3. Множення
     4. Ділення
     5. Піднесення до степеня''')
-    action = input("Оберіть дію: ")
+    action = input("\nОберіть дію або введіть 'exit' для виходу: ").strip().lower()
     if action in ('1', '2', '3', '4', '5'):
-        a = float(input("Уведіть число a: "))
+        a = float(input("\nУведіть число a: "))
         b = float(input("Уведіть число b: "))
         return a, b, action
+    elif action == 'exit':
+        print('\n\n\nКалькулятор припинив свою роботу.')
+        exit()
     else:
-        print('Обрано некоректну дію.')
+        print('\nОбрано некоректну дію.\n')
 
 
-input_data = input_call()
-if input_data is not None:
-    print(f'\nРезультат: {calculator(input_data[0], input_data[1], input_data[2])}')
+print('Калькулятор розпочав свою роботу.\n\n')
+while True:
+    input_data = input_call()
+    if input_data is not None:
+        print(f'\nРезультат: {calculator(input_data[0], input_data[1], input_data[2])}\n')
