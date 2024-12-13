@@ -1,7 +1,12 @@
 import csv
 import sys
 
-students = []
+students = [
+    {"name": "Bob", "phone": "0631234567", "age": 20, "sex": "M"},
+    {"name": "Emma", "phone": "0631234567", "age": 22, "sex": "F"},
+    {"name": "Jon", "phone": "0631234567", "age": 21, "sex": "M"},
+    {"name": "Zak", "phone": "0631234567", "age": 23, "sex": "M"}
+]
 
 
 def loadFromCsv(filename):
@@ -126,4 +131,5 @@ def main():
                 print("Wrong choice. Please try again.")
 
 
-main()
+if __name__ == '__main__':
+    main()
